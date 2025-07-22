@@ -553,7 +553,7 @@ note: skipped the following crates since they have no library target: {skipped}"
                                 overrides,
                                 current_crate_data: CrateDataForRustdoc {
                                     crate_type: rustdoc_gen::CrateType::Current,
-                                    name: crate_name.clone(),
+                                    name: crate_name.to_string(),
                                     registry_name: registry_name.map(From::from),
                                     feature_config: &self.current_feature_config,
                                     build_target: self.build_target.as_deref(),
@@ -562,7 +562,7 @@ note: skipped the following crates since they have no library target: {skipped}"
                                     crate_type: rustdoc_gen::CrateType::Baseline {
                                         highest_allowed_version: Some(version.clone()),
                                     },
-                                    name: crate_name.clone(),
+                                    name: crate_name.to_string(),
                                     registry_name: registry_name.map(From::from),
                                     feature_config: &self.baseline_feature_config,
                                     build_target: self.build_target.as_deref(),
